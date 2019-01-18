@@ -6,7 +6,6 @@
 
 # Display
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.sf.lcd_density=560 \
     vendor.display.disable_mask_layer_hint=1
 
 
