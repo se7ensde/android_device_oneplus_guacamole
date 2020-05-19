@@ -14,6 +14,9 @@ $(call inherit-product, device/oneplus/guacamole/device.mk)
 # Inherit some common Lineage stuff.
 $(call inherit-product, vendor/bliss/config/common_full_phone.mk)
 
+# Bootanimation
+TARGET_BOOT_ANIMATION_RES := 1440
+
 # Device identifier. This must come after all inclusions.
 PRODUCT_NAME := bliss_guacamole
 PRODUCT_DEVICE := guacamole
@@ -34,4 +37,10 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     TARGET_DEVICE=OnePlus7Pro \
     PRODUCT_NAME=OnePlus7Pro
 
+# Device Maintainer
+PRODUCT_PROPERTY_OVERRIDES += \
+	ro.bliss.maintainer=Pyrtle93
+
 PRODUCT_GMS_CLIENTID_BASE := android-oneplus
+
+BLISS_BUILDTYPE=OFFICIAL
